@@ -4,16 +4,27 @@ A Streamlit web application that predicts Singapore HDB resale flat prices. This
 
 ✨ Features
 Interactive UI: User-friendly input for property details via Streamlit.
+
 Local Model & Data:
+
 Pre-trained XGBoost model (model.bst) loaded locally.
+
 Data scaler (scaler.joblib) applied for consistent feature scaling.
+
 Postal code data (postal_data.json) for location-based information.
+
 Integrated Transaction Map:
+
 Displays HDB resale transactions on an interactive map via an iframe to an externally hosted HTML file.
+
 Clickable markers show recent transaction details for each block.
+
 Responsive Design: Includes CSS adjustments for better viewing on mobile devices.
+
 Theme Toggle: Light and Dark mode options.
+
 Dockerized: Ready for containerization.
+
 📁 Project Structure
 .
 ├── app.py
@@ -25,33 +36,47 @@ Dockerized: Ready for containerization.
 └── README.md
 🚀 Running Locally
 1. Clone the repository
+2. 
 If you are setting this up from a Git repository:
 
+
 git clone https://github.com/seehiong/hdb-price-predictor-app.git
+
 cd hdb-price-predictor-app
+
 If you have the files directly, ensure all files listed in the "Project Structure" (excluding the map HTML itself from the local app directory) are in your working directory.
 
+
 2. Install dependencies
+   
 It's recommended to use a virtual environment:
 
+
 python -m venv venv
+
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
 Then install the required packages:
 
 pip install -r requirements.txt
-3. Ensure local required files are present
-Verify that app.py, model.bst, scaler.joblib, and postal_data.json are in the current directory.
 
-4. Run the Streamlit app
-streamlit run app.py
-The application should now be accessible in your web browser, usually at http://localhost:8501.
+3. Ensure local required files are present
+ 
+4. Verify that app.py, model.bst, scaler.joblib, and postal_data.json are in the current directory.
+
+5. Run the Streamlit app
+   
+6.streamlit run app.py
+
+7.The application should now be accessible in your web browser, usually at http://localhost:8501.
 
 🐳 Docker Instructions
+
 1. Build the Docker image
 From the project's root directory (where the Dockerfile is located):
-
 docker build -t hdb-predictor-app:latest .
-2. Run the Docker container
+
+3. Run the Docker container
 docker run -p 8501:8501 hdb-predictor-app:latest
 The app will be accessible at http://localhost:8501 on your host machine.
 
@@ -103,3 +128,4 @@ Dockerfile
 1.7%
 Footer
 © 2026 GitHub,
+STAR THIS REPO
